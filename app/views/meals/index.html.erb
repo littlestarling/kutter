@@ -18,7 +18,7 @@
       <tr>
         <td><%= meal.name %></td>
         <td><%= meal.description %></td>
-        <td><%= meal.picture %></td>
+        <td><%= meal.picture.present? ? image_tag(meal.picture_url, width: 100) : '' -%></td>
         <td><%= meal.category %></td>
         <td><%= link_to 'Show', meal %></td>
         <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
